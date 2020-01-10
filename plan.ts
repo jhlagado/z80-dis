@@ -141,13 +141,17 @@ function decodeED() {
             if (y < 4) {
                 let a1, a2;
                 if (y === 0) {
-                    a1 = "I"; a2 = "A";
+                    a1 = "I";
+                    a2 = "A";
                 } else if (y === 1) {
-                    a1 = "R"; a2 = "A";
+                    a1 = "R";
+                    a2 = "A";
                 } else if (y === 2) {
-                    a1 = "A"; a2 = "I";
+                    a1 = "A";
+                    a2 = "I";
                 } else {
-                    a1 = "A"; a2 = "R";
+                    a1 = "A";
+                    a2 = "R";
                 }
                 print3("LD", a1, a2);
             } else {
@@ -295,13 +299,13 @@ function decodeOpcode(opcode, mode) {
             else if (y === 4) {
                 print3('EX', '(SP)', HL(mode));
             }
-            else if (y === 4) {
+            else if (y === 5) {
                 print3('EX','DE', 'HL');
             }
-            else if (y === 4) {
+            else if (y === 6) {
                 print1('DI');
             }
-            else if (y === 4) {
+            else if (y === 7) {
                 print1('EI');
             }
         }
